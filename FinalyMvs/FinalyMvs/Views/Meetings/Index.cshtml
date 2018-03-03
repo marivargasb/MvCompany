@@ -1,0 +1,188 @@
+﻿@model IEnumerable<FinalyMvs.Models.Meeting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<br
+<style> 
+    
+</style>
+<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-section__container mbr-section__container--isolated mbr-after-navbar" id="gallery2-17" data-rv-view="34">
+        <div class="container">
+                <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+                 <div class="mail-box">
+                                  <aside class="sm-side">
+                                      <div class="user-head">
+                                       
+                                          <div class="user-name">
+                                           <h5><a href="#">@Login.name</a></h5>
+                                              <span><a href="#">Cliente MVcompany</a></span>
+                                          </div>
+                                      
+                                      </div>
+                                      <div class="inbox-body">
+                                          <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-compos  ">
+                                             Back
+                                          </a>
+                                          <!-- Modal -->
+                                         
+                                      </div>
+                                      <ul class="inbox-nav inbox-divider">
+                                      @if (Login.isAdmin)
+                                     {
+                                      <li class="active">
+                                          <a href="~/Users/List"><i class="fa fa-inbox"></i> Users </a>
+
+                                      </li>
+                                          }
+                                          <li>
+                                              <a  href="~/Clients/Index" ><i class="fa fa-envelope-o"></i>Clients</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Contacts/Index" ><i class="fa fa-bookmark-o"></i> Contacts</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Tickets/Index" ><i class=" fa fa-external-link"></i> Tickets</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Meetings/Index" ><i class=" fa fa-trash-o"></i> Meeting</a>
+                                          </li>
+                                      </ul>
+            
+            
+                
+                                  </aside>
+              </aside>
+                                  <aside class="lg-side">
+                                      <div class="inbox-head client">
+                                             <a asp-action="Create"  class="btn   btn-secondary-outline btn-secondary  ">
+                                              Create New
+                                          </a>  
+                                    
+                                      </div>
+                                      <div class="">
+
+
+                                            <div class="container">
+                                                    <div class="row">
+                                                <br>
+
+                                                        <section class="content ">
+
+
+
+
+<!-- star -->
+
+<h2 class="client">Meetings</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="#" method="get">
+                <div class="input-group">
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                      <span class="input-group-btn">
+                      <button class="btn btn-info-outline btn-info" type="button">Go!</button>
+                      </span>
+                    <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
+               
+                </div>
+            </form>
+        </div>
+		<div class="col-md-12">
+    	 <table class="table table-list-search">
+            <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReleaseDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clients)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clients.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Users.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+                </table>   
+                     <br><br><br> <br><br><br> <br><br><br>
+		</div>
+	</div>
+</div>
+
+<!-- end -->
+
+                                                        </section>
+                                                    
+                                                    </div>
+                                                </div>
+
+
+                            
+                            
+                                      </div>
+                                  </aside>
+                                                         </div>
+                </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+﻿@model FinalyMvs.Models.Users
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+.foto{
+    background-image: url("https://i2.wp.com/blogindicativo.com.br/wp-content/uploads/2018/01/robert-katzki-340194.jpg");
+  padding-top: 4.5rem; padding-bottom: 4.5rem;
+}
+
+</style>
+
+<section class="mbr-section mbr-section-nopadding mbr-after-navbar" id="msg-box4-b" data-rv-view="2" style="background-color: rgb(255, 255, 255); padding-top: 3rem; padding-bottom: 4.5rem;">
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-xs-12 col-lg-3 mbr-inner-padding text-xs-center mbr-table-cell-lg">
+                <h3 class="mbr-section-title display-4">Login</h3>   
+                <p class="mbr-section-title display-4"> @ViewData["Message"] </p>   
+
+<!--login -->
+        <section class="login-form">
+
+          <form  asp-action="Index">
+           
+              <div class="col-xs-12 col-lg-12">
+            <input asp-for="Card" type="text" class="form-control input-lg"  placeholder="Card"  />
+    
+            </div>
+        </br>
+        </br>
+            <div class="col-xs-12 col-lg-12 ">
+            <input asp-for="Password" type="password" class="form-control input-lg"  placeholder="Password" />
+      
+            </div>
+        
+        </br>
+    </br>
+            <button type="submit"  value="Index" class="btn btn-lg btn-info-outline btn-info">Sign in</button>
+            <div>
+              <a href="#">Create account</a> or <a href="#">reset password</a>
+               
+            </div>
+            
+          </form>
+          
+          <div class="form-links">
+            <a href="#">www.website.com</a>
+          </div>
+
+
+        </section>  
+       
+
+<!-- end the login -->         
+            </div>
+            <div class="col-xs-12 col-lg-9 mbr-table-cell-lg image-size" style="width: 21%;">
+                <div class="mbr-figure"><img src="~/css/assets/images/mbr-1080x1080.jpg"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mbr-section mbr-section-small mbr-parallax-background foto" id="features1-g" data-rv-view="7">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="card cart-block">
+                    <div><img src="~/css/assets/images/feature-bootstrap.png" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Tareas</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card cart-block">
+                    <div><img src="~/css/assets/images/feature-responsive.png" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Organizacion</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card cart-block">
+                    <div><img src="~/css/assets/images/feature-google-fonts.png" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Union</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="card cart-block">
+                    <div><img src="~/css/assets/images/feature-websites.png" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title text-xs-center">Desarrollo</h4>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

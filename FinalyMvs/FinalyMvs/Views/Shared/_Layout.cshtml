@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Site made with Mobirise Website Builder v4.6.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.6.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="~/css/assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - MvCompanys</title>
+
+      <environment exclude="Development">
+  <link rel="stylesheet" href="~/css/assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&subset=latin,vietnamese,latin-ext">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" href="~/css/assets/tether/tether.min.css">
+  <link rel="stylesheet" href="~/css/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="~/css/assets/dropdown-menu/style.light.css">
+  <link rel="stylesheet" href="~/css/assets/puritym/css/style.css">
+  <link rel="stylesheet" href="~/css/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+      </environment>
+<environment include="Development">
+
+  <link rel="stylesheet" href="~/css/assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&subset=latin,vietnamese,latin-ext">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" href="~/css/assets/tether/tether.min.css">
+  <link rel="stylesheet" href="~/css/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/assets/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="~/css/assets/dropdown-menu/style.light.css">
+  <link rel="stylesheet" href="~/css/assets/puritym/css/style.css">
+  <link rel="stylesheet" href="~/css/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+</environment>
+  
+  <style>
+      .client{
+
+    text-align: center;
+}
+.mbr-after-navbar{
+    background-image: url("http://www.guia-empresas.net/fondos/grandes/GE-fondo1.jpg");
+    padding-top: 6rem;
+     padding-bottom: 0rem;
+     padding: 6rem;
+
+}
+       </style>
+
+</head>
+<body>
+     <section id="dropdown-menu-9" data-rv-view="0">
+
+      <nav class="navbar navbar-dropdown">
+
+          <div class="container">
+              @if (Login.isActiv)
+    {
+
+          @if (Login.isAdmin)
+{
+          <div class="navbar-brand">
+
+              <a class="text-white" asp-area="" asp-controller="Home" asp-action="Contact"> <span class="mbri-globe mbr-iconfont mbr-iconfont-btn" style="font-size: 60px; color: rgb(241, 192, 80);"></span>MV company</a>
+          </div>
+
+}
+else if (Login.isAdmin == false)
+{
+          <div class="navbar-brand">
+
+              <a class="text-white" asp-area="" asp-controller="Home"  asp-action="About"> <span class="mbri-globe mbr-iconfont mbr-iconfont-btn" style="font-size: 60px; color: rgb(241, 192, 80);"></span>MV company</a>
+          </div>
+
+
+}
+}
+else
+{
+          <div class="navbar-brand">
+
+              <a class="text-white"> <span class="mbri-globe mbr-iconfont mbr-iconfont-btn" style="font-size: 60px; color: rgb(241, 192, 80);"></span>MV company</a>
+          </div>
+}
+
+
+
+              <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                  <div class="hamburger-icon"></div>
+              </button>
+
+              <ul class="nav-dropdown collapse pull-xs-right navbar-toggleable-sm nav navbar-nav" id="exCollapsingNavbar">
+
+
+                  @if (Login.isActiv)
+        {
+          <li class="nav-item"><a class="nav-link link" href="https://mobirise.com/" aria-expanded="false"></a></li>
+          <li class="nav-item"><a class="nav-link link" aria-expanded="false">@Login.name</a></li>
+          <li class="nav-item nav-btn">
+              <a class="nav-link btn btn-warning-outline btn-warning" asp-controller="Users" asp-action="SignOut">Sign Out</a>
+          </li>
+}
+              </ul>
+
+          </div>
+
+    </nav>
+
+</section>
+    <div class="container body-content"></div>
+    
+
+        @RenderBody()
+       
+    </div>
+    <footer class="mbr-section mbr-section-nopadding mbr-footer" id="footer1-f" data-rv-view="5" style="background-color: rgb(217, 83, 79); padding-top: 4rem; padding-bottom: 2.64rem;">
+    
+    <div class="container">
+        <p>Copyright (c) 2015 Company MV<a href="https://mobirise.com/">Terms of Use</a>  | <a href="https://mobirise.com/">Privacy Policy</a></p>
+    </div>
+</footer>
+
+
+     <environment include="Development">
+
+  
+       <script src="~/js/site.js"></script>
+  <script src="~/css/assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="~/css/assets/tether/tether.min.js"></script>
+  <script src="~/css/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="~/css/assets/smooth-scroll/SmoothScroll.js"></script>
+  <script src="~/css/assets/jarallax/jarallax.js"></script>
+  <script src="~/css/assets/dropdown-menu/script.js"></script>
+  <script src="~/css/assets/puritym/js/script.js"></script>
+   <script src="~/wwwroot/js/site.min.js" asp-append-version="true"></script>
+    <script>
+
+// jQuery
+$(document).ready(function(){ 
+    $('.alternar-respuesta-ej1').on('click',function(){
+       $('.respuesta-ej1').toggle();
+    });
+ });
+
+
+      </script>
+
+      
+      <script>
+
+// Write your JavaScript code.
+$(document).ready(function() {
+    var activeSystemClass = $('.list-group-item.active');
+
+    //something is entered in search form
+    $('#system-search').keyup( function() {
+       var that = this;
+        // affect all table rows on in systems table
+        var tableBody = $('.table-list-search tbody');
+        var tableRowsClass = $('.table-list-search tbody tr');
+        $('.search-sf').remove();
+        tableRowsClass.each( function(i, val) {
+        
+            //Lower text for case insensitive
+            var rowText = $(val).text().toLowerCase();
+            var inputText = $(that).val().toLowerCase();
+            if(inputText != '')
+            {
+                $('.search-query-sf').remove();
+                tableBody.prepend('<tr class="search-query-sf"><td colspan="6"><strong>Searching for: "'
+                    + $(that).val()
+                    + '"</strong></td></tr>');
+            }
+            else
+            {
+                $('.search-query-sf').remove();
+            }
+
+            if( rowText.indexOf( inputText ) == -1 )
+            {
+                //hide rows
+                tableRowsClass.eq(i).hide();
+                
+            }
+            else
+            {
+                $('.search-sf').remove();
+                tableRowsClass.eq(i).show();
+            }
+        });
+        //all tr elements are hidden
+        if(tableRowsClass.children(':visible').length == 0)
+        {
+            tableBody.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
+        }
+    });
+});
+
+      </script>
+  
+    </environment>
+
+     <environment exclude="Development">
+
+       <script src="~/js/site.js"></script>
+    <script src="~/css/assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="~/css/assets/tether/tether.min.js"></script>
+  <script src="~/css/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="~/css/assets/smooth-scroll/SmoothScroll.js"></script>
+  <script src="~/css/assets/jarallax/jarallax.js"></script>
+  <script src="~/css/assets/dropdown-menu/script.js"></script>
+  <script src="~/css/assets/puritym/js/script.js"></script>
+    <script>
+
+// jQuery
+$(document).ready(function(){ 
+    $('.alternar-respuesta-ej1').on('click',function(){
+       $('.respuesta-ej1').toggle();
+    });
+ });
+
+
+      </script>
+
+      <script>
+
+// Write your JavaScript code.
+$(document).ready(function() {
+    var activeSystemClass = $('.list-group-item.active');
+
+    //something is entered in search form
+    $('#system-search').keyup( function() {
+       var that = this;
+        // affect all table rows on in systems table
+        var tableBody = $('.table-list-search tbody');
+        var tableRowsClass = $('.table-list-search tbody tr');
+        $('.search-sf').remove();
+        tableRowsClass.each( function(i, val) {
+        
+            //Lower text for case insensitive
+            var rowText = $(val).text().toLowerCase();
+            var inputText = $(that).val().toLowerCase();
+            if(inputText != '')
+            {
+                $('.search-query-sf').remove();
+                tableBody.prepend('<tr class="search-query-sf"><td colspan="6"><strong>Searching for: "'
+                    + $(that).val()
+                    + '"</strong></td></tr>');
+            }
+            else
+            {
+                $('.search-query-sf').remove();
+            }
+
+            if( rowText.indexOf( inputText ) == -1 )
+            {
+                //hide rows
+                tableRowsClass.eq(i).hide();
+                
+            }
+            else
+            {
+                $('.search-sf').remove();
+                tableRowsClass.eq(i).show();
+            }
+        });
+        //all tr elements are hidden
+        if(tableRowsClass.children(':visible').length == 0)
+        {
+            tableBody.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
+        }
+    });
+});
+
+      </script>
+     </environment>
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
+
+

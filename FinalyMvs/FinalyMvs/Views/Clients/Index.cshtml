@@ -1,0 +1,189 @@
+﻿@model IEnumerable<FinalyMvs.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+
+
+}
+
+
+
+ <style>
+     body{
+        font-family: 'Lato', sans-serif;
+     }
+.glyphicon-lg
+{
+    font-size:4em
+}
+.info-block
+{
+    border-right:2px solid rgb(122, 191, 236);margin-bottom:25px
+}
+.info-block .square-box
+{
+    width:30px;min-height:30px;margin-right:22px;text-align:
+    center!important;background-color:#ffffff;padding:20px 0
+}
+.info-block.block-info
+{
+    border-color:#ececeaa8
+}
+.client{
+
+    text-align: center;
+}
+
+.mbr-after-navbar{
+    background-image: url("http://www.guia-empresas.net/fondos/grandes/GE-fondo1.jpg");
+    padding-top: 6rem;
+     padding-bottom: 0rem;
+     padding: 6rem;
+
+}
+</style>
+
+
+
+
+
+<style> 
+    
+</style>
+<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-section__container mbr-section__container--isolated mbr-after-navbar" id="gallery2-17" data-rv-view="34">
+        <div class="container">
+                <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+                 <div class="mail-box">
+                                  <aside class="sm-side">
+                                      <div class="user-head">
+                                       
+                                          <div class="user-name">
+                                           <h5><a href="#">@Login.name</a></h5>
+                                              <span><a href="#">Cliente MVcompany</a></span>
+                                          </div>
+                                      
+                                      </div>
+                                      <div class="inbox-body">
+                                          <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-compos  ">
+                                             Back
+                                          </a>
+                                          <!-- Modal -->
+                                         
+                                      </div>
+                                      <ul class="inbox-nav inbox-divider">
+                                     
+                                          @if (Login.isAdmin)
+                                     {
+                                      <li class="active">
+                                          <a href="~/Users/List"><i class="fa fa-inbox"></i> Users </a>
+
+                                      </li>
+                                          }
+
+                                          <li>
+                                              <a href="~/Clients/Index"><i class="fa fa-envelope-o"></i>Clients</a>
+                                          </li>
+
+                                          <li>
+                                              <a href="~/Contacts/Index"><i class="fa fa-bookmark-o"></i> Contacts</a>
+                                          </li>
+                                          <li>
+                                              <a href="~/Tickets/Index"><i class=" fa fa-external-link"></i> Tickets</a>
+                                          </li>
+                                          <li>
+                                              <a href="~/Contacts/Index"><i class=" fa fa-trash-o"></i> Meeting</a>
+                                          </li>
+                                      </ul>
+            
+            
+                
+                                  </aside>
+              </aside>
+                                  <aside class="lg-side">
+                                      <div class="inbox-head client">
+                                             <a asp-action="Create"  class="btn   btn-secondary-outline btn-secondary  ">
+                                              Create New
+                                          </a>  
+                                    
+                                      </div>
+                                      <div class="">
+
+
+                                            <div class="container">
+                                                    <div class="row">
+                                                <br>
+
+                                                        <section class="content ">
+
+
+
+
+                    <!-- aqui-->
+                                                 <div class="container">
+                                                        <div class="row">
+                                                                <br><br>
+                                                            <h1 class="client">Client List</h1>
+                                                            <div class="col-lg-12">
+                                                                <input type="search" class="form-control" id="input-search" placeholder="Search Attendees..." >
+                                                            </div>
+                                                            <br><br> <br>  <br>
+                                                            <div class="searchable-container">
+
+                                                             @foreach (var item in Model) {
+    
+
+
+                                                                   <div class="items col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix">
+                                                                   <div class="info-block block-info clearfix">
+                                                                        <div class="square-box pull-left">
+                                                                            <span class="mbri-users mbr-iconfont mbr-iconfont-btn" style="font-size: 40px; color: rgb(130, 180, 226);"></span>
+                                                                        </div>
+                                                                      
+                                                                                <h6> <b>Name:</b>@Html.DisplayFor(modelItem => item.Name)  @Html.DisplayFor(modelItem => item.LastName)</h6>
+                                                                                <h7> @Html.DisplayFor(modelItem => item.Position)</h7>
+     
+                                                                        <div class="respuesta-ej1" id="respuesta-ej1" style="display:none">
+                                                                                <br>
+                                                                                <span><b>Email:</b>@Html.DisplayFor(modelItem => item.Mail)</span>
+                                                                                <span><b>Phone:</b> @Html.DisplayFor(modelItem => item.Phone)</span>
+                    
+                                                                                   @Html.ActionLink("List" , "index", "Contacts" , new {id = @item.ID}) 
+
+                                                                                <br>
+                                     
+                                                                                        <a asp-action="Delete" asp-route-id="@item.ID"><span class="mbri-trash mbr-iconfont mbr-iconfont-btn" style="font-size: 25px; color: rgb(162, 164, 167);"></span></a>   
+                                                                                        <a asp-action="Edit" asp-route-id="@item.ID"><span class="mbri-edit2 mbr-iconfont mbr-iconfont-btn" style="font-size: 25px; color: rgb(155, 154, 152);"></span></a>   
+                                                                                                  <a asp-action="Details" asp-route-id="@item.ID">Details</a> | 
+
+                                                                        </div>
+                                                                       <a href="#" class="alternar-respuesta-ej1" id="alternar-respuesta-ej1">more...</a>
+                                                                      
+                                                                    </div>
+                                                                </div>
+                      
+                                                                 }                 
+                                                                                         
+                                                                                            
+                                                                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                         
+                                                 <!-- fin-->
+
+                                                        </section>     <br><br><br> <br><br><br> <br><br><br>
+                                                    
+                                                    </div>
+                                                </div>
+
+
+                            
+                            
+                                      </div>
+                                  </aside>
+                                                         </div>
+                </div>
+</section>
+
+

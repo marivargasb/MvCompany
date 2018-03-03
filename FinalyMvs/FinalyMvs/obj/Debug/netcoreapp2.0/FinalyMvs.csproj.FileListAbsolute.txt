@@ -1,0 +1,11 @@
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\bin\Debug\netcoreapp2.0\FinalyMvs.deps.json
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\bin\Debug\netcoreapp2.0\FinalyMvs.runtimeconfig.json
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\bin\Debug\netcoreapp2.0\FinalyMvs.runtimeconfig.dev.json
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\bin\Debug\netcoreapp2.0\FinalyMvs.dll
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\obj\Debug\netcoreapp2.0\FinalyMvs.csprojResolveAssemblyReference.cache
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\obj\Debug\netcoreapp2.0\FinalyMvs.csproj.CoreCompileInputs.cache
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\obj\Debug\netcoreapp2.0\FinalyMvs.AssemblyInfoInputs.cache
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\obj\Debug\netcoreapp2.0\FinalyMvs.AssemblyInfo.cs
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\bin\Debug\netcoreapp2.0\FinalyMvs.pdb
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\obj\Debug\netcoreapp2.0\FinalyMvs.dll
+C:\Users\mavar\source\repos\FinalyMvs\FinalyMvs\obj\Debug\netcoreapp2.0\FinalyMvs.pdb

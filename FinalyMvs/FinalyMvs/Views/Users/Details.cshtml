@@ -1,0 +1,170 @@
+﻿@model FinalyMvs.Models.Users
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+
+<br
+<style> 
+    
+</style>
+<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-section__container mbr-section__container--isolated mbr-after-navbar" id="gallery2-17" data-rv-view="34">
+        <div class="container">
+                <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+                 <div class="mail-box">
+                                  <aside class="sm-side">
+                                      <div class="user-head">
+                                       
+                                          <div class="user-name">
+                                           <h5><a href="#">@Login.name</a></h5>
+                                              <span><a href="#">Cliente MVcompany</a></span>
+                                          </div>
+                                      
+                                      </div>
+                                      <div class="inbox-body">
+                                          <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-compose  ">
+                                             Back
+                                          </a>
+                                          <!-- Modal -->
+                                         
+                                      </div>
+                                      <ul class="inbox-nav inbox-divider">
+                                            @if (Login.isAdmin)
+                                     {
+                                      <li class="active">
+                                          <a href="~/Users/List"><i class="fa fa-inbox"></i> Users </a>
+
+                                      </li>
+                                          }
+                                          <li>
+                                              <a  href="~/Clients/Index" ><i class="fa fa-envelope-o"></i>Clients</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Contacts/Index" ><i class="fa fa-bookmark-o"></i> Contacts</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Tickets/Index" ><i class=" fa fa-external-link"></i> Tickets</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Meetings/Index" ><i class=" fa fa-trash-o"></i> Meeting</a>
+                                          </li>
+                                      </ul>
+            
+            
+                
+                                  </aside>
+              </aside>
+                                  <aside class="lg-side">
+                                      <div class="inbox-head client">
+
+                                          
+                                            <a  asp-action="Create"  class="btn   btn-secondary-outline btn-secondary  ">
+                                          New
+                                          </a> 
+
+
+                                           <a asp-action="List"  class="btn   btn-secondary-outline btn-secondary  ">
+                                           Back to List
+                                          </a>  
+
+                                          <a   asp-action="Edit" asp-route-id="@Model.ID"  class="btn   btn-secondary-outline btn-secondary  ">
+
+                                          Edit
+                                          </a>  
+
+                                    
+                                    
+                                    
+                                      </div>
+                                      <div class="">
+
+
+                                            <div class="container">
+                                                    <div class="row">
+                                                <br>
+
+                                                        <section class="content ">
+
+                                     <h2  class="client">Details</h2>
+
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <h4  class="client">Users</h4>
+                                            <hr/>
+                                            <dl class="client">
+       <dt>
+            @Html.DisplayNameFor(model => model.Card)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Card)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageWeb)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PageWeb)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+                                            </dl>
+                                        </div>
+                                     
+
+                                                        </section>
+                                                             <br><br><br> <br><br><br> <br><br><br>
+                                                    
+                                                    </div>
+                                                </div>
+
+
+                            
+                            
+                                      </div>
+                                  </aside>
+                                                         </div>
+                </div>
+</section>
+
+
+
+
+
+
+
+

@@ -1,0 +1,247 @@
+﻿@model IEnumerable<FinalyMvs.Models.Tickets>
+
+@{
+    ViewData["Title"] = "Index";
+}
+  
+  <style>
+  
+/*	--------------------------------------------------
+	:: Table Filter
+	-------------------------------------------------- */
+.panel {
+	border: 1px solid #ddd;
+	background-color: #fcfcfc;
+}
+.panel .btn-group {
+	margin: 15px 0 30px;
+}
+.panel .btn-group .btn {
+	transition: background-color .3s ease;
+}
+.table-filter {
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+.table-filter tbody tr:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+.table-filter tbody tr td {
+	padding: 10px;
+	vertical-align: middle;
+	border-top-color: #eee;
+}
+.table-filter tbody tr.selected td {
+	background-color: #eee;
+}
+.table-filter tr td:first-child {
+	width: 38px;
+}
+.table-filter tr td:nth-child(2) {
+	width: 35px;
+}
+
+.table-filter .star {
+	color: #ccc;
+	text-align: center;
+	display: block;
+}
+.table-filter .star.star-checked {
+	color: #F0AD4E;
+}
+.table-filter .star:hover {
+	color: #ccc;
+}
+.table-filter .star.star-checked:hover {
+	color: #F0AD4E;
+}
+.table-filter .view-message .media-meta {
+	font-size: 11px;
+	color: #999;
+}
+.table-filter .view-message .media .title {
+	color: #2BBCDE;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: normal;
+	margin: 0;
+}
+.table-filter  .media .title span {
+	font-size: .8em;
+	margin-right: 20px;
+}
+.table-filter .media .title span.finalized {
+	color: #5cb85c;
+}
+.table-filter .media .title span.process {
+	color: #f0ad4e;
+}
+.table-filter .media .title span.wait {
+	color: #d9534f;
+}
+.table-filter .media .summary {
+	font-size: 14px;
+}
+.nav{margin-right:200px;}
+  
+  .client{
+
+    text-align: center;
+}
+  
+  </style>
+
+
+<br>
+
+
+<section class="mbr-gallery mbr-section mbr-section-nopadding mbr-section__container mbr-section__container--isolated mbr-after-navbar" id="gallery2-17" data-rv-view="34">
+        <div class="container">
+                <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+                 <div class="mail-box">
+                                  <aside class="sm-side">
+                                      <div class="user-head">
+                                       
+                                          <div class="user-name">
+                                           <h5><a href="#">@Login.name</a></h5>
+                                              <span><a href="#">Cliente MVcompany</a></span>
+                                          </div>
+                                      
+                                      </div>
+                                      <div class="inbox-body">
+                                          <a href="#myModal" data-toggle="modal"  title="Compose"    class="btn btn-compos  ">
+                                             Back
+                                          </a>
+                                          <!-- Modal -->
+                                         
+                                      </div>
+                                      <ul class="inbox-nav inbox-divider">
+                                            @if (Login.isAdmin)
+                                     {
+                                      <li class="active">
+                                          <a href="~/Users/List"><i class="fa fa-inbox"></i> Users </a>
+
+                                      </li>
+                                          }
+                                          <li>
+                                              <a  href="~/Clients/Index" ><i class="fa fa-envelope-o"></i>Clients</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Contacts/Index" ><i class="fa fa-bookmark-o"></i> Contacts</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Tickets/Index" ><i class=" fa fa-external-link"></i> Tickets</a>
+                                          </li>
+                                          <li>
+                                              <a  href="~/Meetings/Index" ><i class=" fa fa-trash-o"></i> Meeting</a>
+                                          </li>
+                                      </ul>
+            
+            
+                
+                                  </aside>
+              </aside>
+                                  <aside class="lg-side">
+                                      <div class="inbox-head client">
+                                           <a asp-action="Create"  class="btn   btn-secondary-outline btn-secondary  ">
+                                              Create New
+                                          </a>  
+                                    
+                                      </div>
+                                      <div class="">
+
+
+                                            <div class="container">
+                                                    <div class="row">
+                                                <br>
+
+                                                        <section class="content">
+                                                          
+                                                            <h1 class="client">All Tickets </h1>
+                                                            <div class="col-md-12 col-sm-12">
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-body">
+                                                                        <div class=" col-md-12 col-lg-12 col-lg-offset-3 col-sm-12">
+                                                                            
+                                                                            <div class="btn-group ">
+                                                                                <button type="button" class="btn  btn-success btn-filter" data-target="finalized">finalized</button>
+                                                                                <button type="button" class="btn  btn-warning btn-filter" data-target="process">process</button>
+                                                                                <button type="button" class="btn  btn-danger btn-filter" data-target="wait">wait</button>
+                                                                                <button type="button" class="btn  btn-default btn-filter" data-target="all">all</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="table-container">
+                                                                           
+                                                                      
+                                            <table class="table table-inbox table table-filter table-hover col-xs-12">
+                                                    <tbody>
+                                                @foreach (var item in Model)
+        {
+                                                      <tr  data-status= "@Html.DisplayFor(modelItem => item.State)">
+                                                            <td class="view-message inbox-small-cells"></td>
+                                                            <td class="inbox-small-cells "><i class="fa fa-star"></i></td>
+                                                            <td class="view-message dont-show">       @Html.DisplayFor(modelItem => item.Title) </td>
+                                                       
+                                                            <td class="view-message inbox-small-cells"></td> 
+                                                           
+                                                            <td class="view-message text-right">
+                                                           
+                                                            <div class="media">
+                                                            <div class="media-body">
+                                                               <h1 class="title"> 		<span class="pull-right @Html.DisplayFor(modelItem => item.State)">  @Html.DisplayFor(modelItem => item.State) </span> </h1>
+                                                          <p>    @Html.DisplayFor(modelItem => item.Problem) </p> 
+                                                          
+                                                         
+                                                            </div>
+                                                            </div>
+                                                            </td>
+                                                            <td>
+                                                            
+                                                          <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                                          <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                                           <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                                           </td>
+                                                      </tr>
+
+                  
+        }
+                                                     
+                                                  </tbody>
+                                                  </table>
+     
+     <br><br><br> <br><br><br> <br><br><br>
+
+                                           
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                        
+                                                            </div>
+                                                        </section>
+                                                    
+                                                    </div>
+                                                </div>
+
+
+                            
+                            
+                                      </div>
+                                  </aside>
+                                                         </div>
+                </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
